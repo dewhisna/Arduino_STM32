@@ -190,7 +190,7 @@ void usart_foreach(void (*fn)(usart_dev*)) {
     fn(USART1);
     fn(USART2);
     fn(USART3);
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
     fn(UART4);
     fn(UART5);
 #endif
@@ -212,7 +212,7 @@ __weak void __irq_usart3(void) {
     usart_irq(&usart3_rb, &usart3_wb, USART3_BASE);
 }
 
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 __weak void __irq_uart4(void) {
     usart_irq(&uart4_rb, &uart4_wb, UART4_BASE);
 }

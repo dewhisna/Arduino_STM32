@@ -95,7 +95,7 @@ __stm32_vector_table:
 	.long	__irq_exti15_10
 	.long	__irq_rtcalarm
 	.long	__irq_usbwakeup
-#if defined (STM32_HIGH_DENSITY)
+#if defined (STM32_HIGH_DENSITY) || defined (STM32_XL_DENSITY)
 	.long	__irq_tim8_brk
 	.long	__irq_tim8_up
 	.long	__irq_tim8_trg_com
@@ -113,6 +113,6 @@ __stm32_vector_table:
 	.long	__irq_dma2_channel2
 	.long	__irq_dma2_channel3
 	.long	__irq_dma2_channel4_5
-#endif /* STM32_HIGH_DENSITY */
+#endif /* STM32_HIGH_DENSITY || STM32_XL_DENSITY */
 
 	.size	__stm32_vector_table, . - __stm32_vector_table

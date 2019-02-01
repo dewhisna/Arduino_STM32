@@ -207,7 +207,7 @@ __default_handler:
 	.weak	__irq_usbwakeup
 	.globl	__irq_usbwakeup
 	.set	__irq_usbwakeup, __default_handler
-#if defined (STM32_HIGH_DENSITY)
+#if defined (STM32_HIGH_DENSITY) || defined (STM32_XL_DENSITY)
 //	.weak	__irq_tim8_brk                              // __irq_tim8_brk() defined in STM32F1/cores/maple/libmaple/timer.c
 //	.globl	__irq_tim8_brk
 //	.set	__irq_tim8_brk, __default_handler
@@ -259,4 +259,4 @@ __default_handler:
 //	.weak	__irq_dma2_channel4_5                       // __irq_dma2_channel4_5() defined in STM32F1/cores/maple/libmaple/dma_f1.c
 //	.globl	__irq_dma2_channel4_5
 //	.set	__irq_dma2_channel4_5, __default_handler
-#endif /* STM32_HIGH_DENSITY */
+#endif /* STM32_HIGH_DENSITY || STM32_XL_DENSITY */

@@ -40,7 +40,7 @@ extern "C" {
 
 #if defined(STM32_MEDIUM_DENSITY)
 #define BKP_NR_DATA_REGS 10
-#elif defined(STM32_HIGH_DENSITY)
+#elif defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 #define BKP_NR_DATA_REGS 42
 #endif
 

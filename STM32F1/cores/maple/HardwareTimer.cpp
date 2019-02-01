@@ -163,7 +163,7 @@ HardwareTimer Timer1(1);
 HardwareTimer Timer2(2);
 HardwareTimer Timer3(3);
 HardwareTimer Timer4(4);
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 HardwareTimer Timer5(5);
 HardwareTimer Timer6(6);
 HardwareTimer Timer7(7);

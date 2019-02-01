@@ -386,7 +386,7 @@ extern HardwareTimer Timer3;
  * Pre-instantiated timer.
  */
 extern HardwareTimer Timer4;
-#if (STM32_MCU_SERIES == STM32_SERIES_F1) && defined(STM32_HIGH_DENSITY)
+#if (STM32_MCU_SERIES == STM32_SERIES_F1) && (defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY))
 /**
  * @brief Deprecated.
  *

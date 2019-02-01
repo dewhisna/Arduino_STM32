@@ -25,7 +25,7 @@
 // construct static timer array (
 
 
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 // define default timer and channel
 	#ifndef TONE_TIMER
 	#define TONE_TIMER 8

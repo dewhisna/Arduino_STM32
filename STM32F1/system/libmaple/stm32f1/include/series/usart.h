@@ -49,7 +49,7 @@ struct usart_reg_map;
 #define USART2_BASE                     ((struct usart_reg_map*)0x40004400)
 /** USART3 register map base pointer */
 #define USART3_BASE                     ((struct usart_reg_map*)0x40004800)
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 /** UART4 register map base pointer */
 #define UART4_BASE                      ((struct usart_reg_map*)0x40004C00)
 /** UART5 register map base pointer */
@@ -64,7 +64,7 @@ struct usart_dev;
 extern struct usart_dev *USART1;
 extern struct usart_dev *USART2;
 extern struct usart_dev *USART3;
-#ifdef STM32_HIGH_DENSITY
+#if defined(STM32_HIGH_DENSITY) || defined(STM32_XL_DENSITY)
 extern struct usart_dev *UART4;
 extern struct usart_dev *UART5;
 #endif
