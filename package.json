@@ -2,5 +2,5 @@
     "description":"Custom Arduino Wiring-based Framework (ST STM32 Core)",
     "name":"framework-arduinoststm32-custom",
     "url":"https://github.com/dewhisna/Arduino_STM32.git",
-    "version":"3.10400.190130"
+    "version":"3.10400.190325"
 }
