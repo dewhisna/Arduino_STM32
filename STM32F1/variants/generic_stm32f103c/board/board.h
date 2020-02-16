@@ -70,8 +70,12 @@
 #define BOARD_JTDO_PIN            19
 #define BOARD_NJTRST_PIN          18
 
+/* USB configuration.  BOARD_USB_DISC_DEV is the GPIO port containing
+ * the USB_DISC pin, and BOARD_USB_DISC_BIT is that pin's bit. */
+#ifndef BOARD_USB_DISC_DEV
 #define BOARD_USB_DISC_DEV        NULL
 #define BOARD_USB_DISC_BIT        NULL
+#endif
 
 #define LED_BUILTIN PC13
 
